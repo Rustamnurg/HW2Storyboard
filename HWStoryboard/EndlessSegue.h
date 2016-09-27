@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  EndlessSegue.h
 //  HWStoryboard
 //
 //  Created by Ildar Zalyalov on 24.09.16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface EndlessSegue : UIViewController
 
 @end
-
