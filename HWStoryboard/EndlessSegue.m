@@ -29,19 +29,19 @@
     _actionButton.backgroundColor = [_colorArr objectAtIndex:arc4random()%_colorArr.count];
     self.view.backgroundColor = [_colorArr objectAtIndex:arc4random()%_colorArr.count];
     [_actionButton setTitle: [_textArr objectAtIndex:arc4random()%_textArr.count] forState:UIControlStateNormal];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    _actionButton.backgroundColor = [_colorArr objectAtIndex:arc4random()%_colorArr.count];
-    self.view.backgroundColor = [_colorArr objectAtIndex:arc4random()%_colorArr.count];
-    if ( self == [self.navigationController.viewControllers objectAtIndex:0] )
-    {
+    
+    if (self == [self.navigationController.viewControllers objectAtIndex:0]){
         UILabel *myLabel = [UILabel new];
         myLabel.text = @"Firs view controller";
         [myLabel sizeToFit];
         [myLabel setCenter:self.view.center];
         [self.view addSubview:myLabel];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    _actionButton.backgroundColor = [_colorArr objectAtIndex:arc4random()%_colorArr.count];
+    self.view.backgroundColor = [_colorArr objectAtIndex:arc4random()%_colorArr.count];
 }
 
 - (void) viewWillDisappear:(BOOL)animated{
